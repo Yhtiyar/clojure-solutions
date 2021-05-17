@@ -1,0 +1,27 @@
+apply : converts list to args
+	(apply + [1 2 3]) -> 6
+	(apply + 1 [2 3]) -> 6
+mapv : applies func with arguments  1st of all args,  2nd of all ...
+	(mapv + [1 2] [3 4]) -> [4 6] 
+        (mapv min [1 5 ] [3 4]) -> [1 4]
+        (mapv (fn [i] (println i)) [1 2 3]) ->  1
+        					2
+        					3	
+range : list at this range
+        (range 0 3) -> (0 1 2)
+       
+juxt :       
+	((juxt + - * /) 1 2 3 4)) -> [10 -8 24 1/24]       
+
+variyng variable
+	 (defn sumSquares [& xs] (apply + (map square xs)))
+         (sumSquares 3 4)
+         
+reduce :  for binary func
+	(reduce(fn [a b] (+ a b)) [1 2 3])    -> 6      
+	
+map-indexed : index - func 
+
+' symbol: for (symbol)
+	(= '+ (symbol "+")) -> true;
+	(def expr '(+ x 1 (* y 10))) -> expr is piece of code		
